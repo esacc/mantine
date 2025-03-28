@@ -160,7 +160,7 @@ export function RenderList({
     switch (event.key) {
       case 'Enter': {
         event.preventDefault();
-        if (filteredData[hovered]) {
+        if (filteredData[hovered] && !filteredData[hovered].isDisabled) {
           onSelect(filteredData[hovered].value);
         }
         break;
